@@ -1,6 +1,11 @@
 /* -----------------------------*/
 /* Basic Set-up   */
 /* -----------------------------*/
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
 html {
     background-attachment: #fff;
     color: #555;
@@ -10,8 +15,17 @@ html {
     text-rendering: optimizeLegibility;
 }
 
+.clearfix {zoom: 1}
+.clearfix:after{
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
 /* -----------------------------*/
 /*       Resuable components   */
+ /* this is orange color #e67e22 */
 /* -----------------------------*/
 
 .row{
@@ -19,20 +33,111 @@ html {
     margin: 0 auto;
 }
 
+section{
+    padding: 80px 0;
+}
+.box{
+    /* padding: 1%; */
+}
+.box p{
+    font-size: 90%;
+    line-height: 145%;
+}
 /* -----------------------------*/
 /*    Headings   */
 /* -----------------------------*/
+h1,h2,h3{
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
 h1{
     margin-top:0;
     margin-bottom: 20px;
     color:#fff;
     font-size: 240%;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     word-spacing: 4px;
+    letter-spacing: 1px;
 }
 
+h2{
+    font-size: 180%;
+    word-spacing: 2px;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+    
+}
+h3{
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+h2:after{
+    display: block;
+    height: 2px;
+    background-color: #e67e22;
+    width: 100px;
+    content: " ";
+    margin: 0 auto;
+    margin-top:30px;
+}
+/* -----------------------------*/
+/*------------Icons--------------*/
+/* -----------------------------*/
+
+.icon-big{
+    font-size: 350%;
+    display: block;
+    color:#e67e22;
+}
+
+.icon-small {
+    display:inline-block;
+    width: 30px;
+    text-align: center;
+    color: #e67e22;
+    font-size: 120%;
+    /* secrets to align text and icons */
+    line-height:120%;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+
+/* -----------------------------*/
+/*          Links              */
+/* -----------------------------*/
+
+a:link,
+a:active{
+    color:#e67e22;
+    text-decoration: none;
+    border-bottom:1px solid #e67e22;
+    padding-bottom: 1px;
+    transition : border-bottom 0.5s, color 0.5s;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom:1px solid transparent;
+}
+
+/* -----------------------------*/
+/*       Features               */
+/* -----------------------------*/
+
+.long-copy .section-features{
+    margin-bottom: 30px;
+}
+/* -----------------------------*/
+/*      ***Paragraph***         */
+/* -----------------------------*/
+
+.long-copy{
+    line-height: 145%;
+    width: 70%;
+    margin-left: 15%;
+}
 /* -----------------------------*/
 /*       Buttons   */
 /* -----------------------------*/
@@ -94,22 +199,142 @@ header{
 }
 
 .logo{
-    height: 150px;
+    height: 100px;
     width: auto;
+    margin-top: 20px;
     float: left;
 }
 .main-nav{
     float: right;
     list-style: none;
+    margin-top: 55px;
 }
-
 .main-nav li{
     display: inline-block;
     margin-left: 40px;
 }
-.main-nav li a{
+.main-nav li a:link,
+.main-nav li a:visited{
+    padding: 8px 0;
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 90%;
+    border-bottom: 2px solid #e67e22 transparent;
+    transition: border-bottom 0.2s;
 }
+
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom:2px solid #e67e22;
+}
+
+
+/* -----------------------------*/
+/*       Meals                   */
+/* -----------------------------*/
+.sections-meals{
+    padding:0;
+}
+.meals-showcase{
+    list-style: none;
+    width: 100%;
+}
+
+.meals-showcase li{
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.meal-photo{
+    width: 100%;
+    margin:0;
+    overflow: hidden;
+    background-color: #000;
+}
+.meal-photo img{
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s, opacity 0.5s;
+}
+.meal-photo img:hover{
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+/* -----------------------------*/
+/*         HOw it works!        */
+/* -----------------------------*/
+
+
+.section-steps {
+    background-color: #f4f4f4;
+}
+.steps-box:first-child{
+    text-align: right;
+    padding-right: 3%;
+    margin-top: 30px;
+}
+.steps-box :last-child{
+    padding-left:3%;
+    margin-top: 70px;
+}
+
+.app-screen{
+    width: 40%;
+}
+.btn-app:link,
+.btn-app:visited{
+    border:0;
+}
+
+.works-step{
+    margin-bottom:50px;
+}
+.works-step:last-of-type{
+    margin-bottom: 20px;
+}
+
+.works-step div{
+    color: #e67e22;
+    border : 2px solid #e67e22;
+    display: inline-block;
+    border-radius: 50%;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 5px;
+    float: left;
+    font-size: 150%;
+    margin-right: 25px;
+}
+
+.btn-app img{
+    width :auto;
+    height: 50px;
+    margin-right: 10px;
+    
+}
+
+
+
+
+/* -----------------------------*/
+/*         Cities           */
+/* -----------------------------*/
+
+
+
+.box img  {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.city-feature {
+    margin-bottom: 5px;
+}
+
