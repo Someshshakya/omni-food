@@ -210,6 +210,11 @@ header{
     margin-top: 20px;
     float: left;
 }
+
+
+/* ------------------------ */
+/*      main-navi */
+/*___________________________*/
 .main-nav{
     float: right;
     list-style: none;
@@ -234,8 +239,58 @@ header{
 .main-nav li a:active{
     border-bottom:2px solid #e67e22;
 }
+/* ------------------------ */
+/*      Sticky Navi */
+/*-----------------------------*/
+.sticky {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.986);
+    box-shadow: 0 2px 2px #efefef;
+    z-index: 9999;
+}
 
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited{
+    padding: 18px 0;
+    color: #555;
 
+}
+.sticky .main-nav{
+    margin-top: 18px;
+}
+
+.logo-black {
+    display:none;
+    height: 50px;
+    width: auto;    
+    float: left;
+    margin-top: 18px;
+}
+.sticky .logo {display:none;}
+.sticky .logo-black {display: block;}
+
+/* ------------------------ */
+/*      mobile Navi */
+/*-----------------------------*/
+.mobile-nav-icon {
+    float: right;
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+    
+}
+a.mobile-nav-icon {
+    border:0;
+}
+
+.mobile-nav-icon i {
+    color: #fff;
+    font-size: 200%;
+
+}
 /* -----------------------------*/
 /*       Meals                   */
 /* -----------------------------*/
@@ -535,3 +590,38 @@ footer p {
 }
 
 /* social colors https://www.designpieces.com/2012/12/social-media-colours-hex-and-rgb/ */
+
+
+
+/* -----------------------------*/
+/*         animation        */
+/* -----------------------------*/
+
+.js--wp-1 {
+    opacity: 0;
+}
+ .js--wp-1.animated{
+    opacity: 1;
+}
+
+
+.js--wp-2 {
+    opacity: 0;
+}
+ .js--wp-2.animated{
+    opacity: 1;
+}
+
+.js--wp-3 {
+    opacity: 0;
+}
+ .js--wp-3.animated{
+    opacity: 1;
+}
+
+.js--wp-4 {
+    opacity: 0;
+}
+ .js--wp-4.animated{
+    opacity: 1;
+}
